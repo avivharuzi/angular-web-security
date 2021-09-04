@@ -33,6 +33,9 @@
     "xss-demo-e2e": {
       "tags": [],
       "implicitDependencies": ["xss-demo"]
+    },
+    "xss-demo-feature-default-sanitization": {
+      "tags": ["scope:xss-demo", "type:feature"]
     }
   }
 }

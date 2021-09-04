@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@angular-web-security/xss-demo/feature-default-sanitization": [
+        "libs/xss-demo/feature-default-sanitization/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

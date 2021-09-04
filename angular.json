@@ -119,6 +119,31 @@
           }
         }
       }
+    },
+    "xss-demo-feature-default-sanitization": {
+      "projectType": "library",
+      "root": "libs/xss-demo/feature-default-sanitization",
+      "sourceRoot": "libs/xss-demo/feature-default-sanitization/src",
+      "prefix": "xss-demo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xss-demo/feature-default-sanitization"],
+          "options": {
+            "jestConfig": "libs/xss-demo/feature-default-sanitization/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/xss-demo/feature-default-sanitization/src/**/*.ts",
+              "libs/xss-demo/feature-default-sanitization/src/**/*.html"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
