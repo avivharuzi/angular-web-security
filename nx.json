@@ -37,6 +37,13 @@
     "csp-demo-feature-home": {
       "tags": ["scope:csp-demo", "type:feature"]
     },
+    "csrf-demo": {
+      "tags": ["type:app"]
+    },
+    "csrf-demo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["csrf-demo"]
+    },
     "xss-demo": {
       "tags": ["type:app"]
     },

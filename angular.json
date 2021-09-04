@@ -145,6 +145,125 @@
         }
       }
     },
+    "csrf-demo": {
+      "projectType": "application",
+      "root": "apps/csrf-demo",
+      "sourceRoot": "apps/csrf-demo/src",
+      "prefix": "csrf-demo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/csrf-demo",
+            "index": "apps/csrf-demo/src/index.html",
+            "main": "apps/csrf-demo/src/main.ts",
+            "polyfills": "apps/csrf-demo/src/polyfills.ts",
+            "tsConfig": "apps/csrf-demo/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/csrf-demo/src/favicon.ico",
+              "apps/csrf-demo/src/assets"
+            ],
+            "styles": ["apps/csrf-demo/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/csrf-demo/src/environments/environment.ts",
+                  "with": "apps/csrf-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "csrf-demo:build:production"
+            },
+            "development": {
+              "browserTarget": "csrf-demo:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "csrf-demo:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/csrf-demo/src/**/*.ts",
+              "apps/csrf-demo/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/csrf-demo"],
+          "options": {
+            "jestConfig": "apps/csrf-demo/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "csrf-demo-e2e": {
+      "root": "apps/csrf-demo-e2e",
+      "sourceRoot": "apps/csrf-demo-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/csrf-demo-e2e/cypress.json",
+            "tsConfig": "apps/csrf-demo-e2e/tsconfig.e2e.json",
+            "devServerTarget": "csrf-demo:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "csrf-demo:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/csrf-demo-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
     "xss-demo": {
       "projectType": "application",
       "root": "apps/xss-demo",
