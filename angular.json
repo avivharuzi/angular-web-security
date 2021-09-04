@@ -120,6 +120,31 @@
         }
       }
     },
+    "csp-demo-feature-home": {
+      "projectType": "library",
+      "root": "libs/csp-demo/feature-home",
+      "sourceRoot": "libs/csp-demo/feature-home/src",
+      "prefix": "csp-demo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/csp-demo/feature-home"],
+          "options": {
+            "jestConfig": "libs/csp-demo/feature-home/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/csp-demo/feature-home/src/**/*.ts",
+              "libs/csp-demo/feature-home/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "xss-demo": {
       "projectType": "application",
       "root": "apps/xss-demo",

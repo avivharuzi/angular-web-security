@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-web-security/csp-demo/feature-home": [
+        "libs/csp-demo/feature-home/src/index.ts"
+      ],
       "@angular-web-security/xss-demo/feature-bypass-security": [
         "libs/xss-demo/feature-bypass-security/src/index.ts"
       ],

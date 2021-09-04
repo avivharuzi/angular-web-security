@@ -34,6 +34,9 @@
       "tags": [],
       "implicitDependencies": ["csp-demo"]
     },
+    "csp-demo-feature-home": {
+      "tags": ["scope:csp-demo", "type:feature"]
+    },
     "xss-demo": {
       "tags": ["type:app"]
     },
