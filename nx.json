@@ -27,8 +27,15 @@
     ]
   },
   "projects": {
+    "csp-demo": {
+      "tags": ["type:app"]
+    },
+    "csp-demo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["csp-demo"]
+    },
     "xss-demo": {
-      "tags": []
+      "tags": ["type:app"]
     },
     "xss-demo-e2e": {
       "tags": [],
