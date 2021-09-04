@@ -8,9 +8,8 @@ describe('DefaultSanitizationComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DefaultSanitizationComponent ]
-    })
-    .compileComponents();
+      declarations: [DefaultSanitizationComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
