@@ -7,7 +7,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DefaultSanitizationComponent {
-  injectHTML = `Simple <b>XSS attack</b> <script>alert('XSS Attack using HTML');</script>`;
+  injectHTML = `Simple <b>XSS attack</b> <img src="" alt="" onerror="alert('XSS Attack using HTML img')" />`;
   attackerURL = `javascript:alert('XSS Attack using URL')`;
   resourceURL = 'https://www.youtube.com/embed/AwjhMPbeD0Y';
 }

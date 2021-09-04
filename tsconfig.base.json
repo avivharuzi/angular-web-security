@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-web-security/xss-demo/feature-bypass-security": [
+        "libs/xss-demo/feature-bypass-security/src/index.ts"
+      ],
       "@angular-web-security/xss-demo/feature-default-sanitization": [
         "libs/xss-demo/feature-default-sanitization/src/index.ts"
       ]

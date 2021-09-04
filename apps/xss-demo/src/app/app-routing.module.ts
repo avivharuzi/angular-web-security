@@ -3,13 +3,21 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'default-sanitization',
     loadChildren: () =>
       import(
         '@angular-web-security/xss-demo/feature-default-sanitization'
       ).then(
         ({ XssDemoFeatureDefaultSanitizationModule }) =>
           XssDemoFeatureDefaultSanitizationModule
+      ),
+  },
+  {
+    path: 'bypass-security',
+    loadChildren: () =>
+      import('@angular-web-security/xss-demo/feature-bypass-security').then(
+        ({ XssDemoFeatureBypassSecurityModule }) =>
+          XssDemoFeatureBypassSecurityModule
       ),
   },
 ];

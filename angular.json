@@ -120,6 +120,31 @@
         }
       }
     },
+    "xss-demo-feature-bypass-security": {
+      "projectType": "library",
+      "root": "libs/xss-demo/feature-bypass-security",
+      "sourceRoot": "libs/xss-demo/feature-bypass-security/src",
+      "prefix": "xss-demo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/xss-demo/feature-bypass-security"],
+          "options": {
+            "jestConfig": "libs/xss-demo/feature-bypass-security/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/xss-demo/feature-bypass-security/src/**/*.ts",
+              "libs/xss-demo/feature-bypass-security/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "xss-demo-feature-default-sanitization": {
       "projectType": "library",
       "root": "libs/xss-demo/feature-default-sanitization",

@@ -34,6 +34,9 @@
       "tags": [],
       "implicitDependencies": ["xss-demo"]
     },
+    "xss-demo-feature-bypass-security": {
+      "tags": ["scope:xss-demo", "type:feature"]
+    },
     "xss-demo-feature-default-sanitization": {
       "tags": ["scope:xss-demo", "type:feature"]
     }

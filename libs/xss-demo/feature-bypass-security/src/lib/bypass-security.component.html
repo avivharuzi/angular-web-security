@@ -1,0 +1,24 @@
+<div>
+  <h1>Bypass Binding using Interpolation</h1>
+  {{ bypassInjectedHTML }}
+</div>
+
+<div>
+  <h1>Bypass Binding with innerHTML</h1>
+  <div [innerHTML]="bypassInjectedHTML"></div>
+</div>
+
+<div>
+  <h1>Bypass Untrusted link</h1>
+  <a [href]="bypassAttackerURL">Attack using URL</a>
+</div>
+
+<div>
+  <h1>Bypass Video Resource URL</h1>
+  <iframe
+    width="560"
+    height="315"
+    [src]="bypassResourceURL"
+    allowfullscreen
+  ></iframe>
+</div>
