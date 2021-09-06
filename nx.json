@@ -37,6 +37,15 @@
     "csp-demo-feature-home": {
       "tags": ["scope:csp-demo", "type:feature"]
     },
+    "csrf-api": {
+      "tags": ["type:app"]
+    },
+    "csrf-api-data-access-users": {
+      "tags": ["scope:csrf-api", "type:data-access"]
+    },
+    "csrf-api-util-helpers": {
+      "tags": ["scope:csrf-api", "type:util"]
+    },
     "csrf-demo": {
       "tags": ["type:app"]
     },

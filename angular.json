@@ -145,6 +145,98 @@
         }
       }
     },
+    "csrf-api": {
+      "root": "apps/csrf-api",
+      "sourceRoot": "apps/csrf-api/src",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/csrf-api",
+            "main": "apps/csrf-api/src/main.ts",
+            "tsConfig": "apps/csrf-api/tsconfig.app.json",
+            "assets": ["apps/csrf-api/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/csrf-api/src/environments/environment.ts",
+                  "with": "apps/csrf-api/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "csrf-api:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/csrf-api/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/csrf-api"],
+          "options": {
+            "jestConfig": "apps/csrf-api/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "csrf-api-data-access-users": {
+      "root": "libs/csrf-api/data-access-users",
+      "sourceRoot": "libs/csrf-api/data-access-users/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/csrf-api/data-access-users/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/csrf-api/data-access-users"],
+          "options": {
+            "jestConfig": "libs/csrf-api/data-access-users/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "csrf-api-util-helpers": {
+      "root": "libs/csrf-api/util-helpers",
+      "sourceRoot": "libs/csrf-api/util-helpers/src",
+      "projectType": "library",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["libs/csrf-api/util-helpers/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/csrf-api/util-helpers"],
+          "options": {
+            "jestConfig": "libs/csrf-api/util-helpers/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "csrf-demo": {
       "projectType": "application",
       "root": "apps/csrf-demo",
@@ -211,7 +303,10 @@
               "browserTarget": "csrf-demo:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+            "proxyConfig": "apps/csrf-demo/proxy.conf.json"
+          }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",

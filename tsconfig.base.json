@@ -18,6 +18,12 @@
       "@angular-web-security/csp-demo/feature-home": [
         "libs/csp-demo/feature-home/src/index.ts"
       ],
+      "@angular-web-security/csrf-api/data-access-users": [
+        "libs/csrf-api/data-access-users/src/index.ts"
+      ],
+      "@angular-web-security/csrf-api/util-helpers": [
+        "libs/csrf-api/util-helpers/src/index.ts"
+      ],
       "@angular-web-security/xss-demo/feature-bypass-security": [
         "libs/xss-demo/feature-bypass-security/src/index.ts"
       ],
