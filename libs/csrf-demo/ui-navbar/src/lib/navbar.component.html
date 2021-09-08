@@ -1,1 +1,6 @@
-<p>navbar works!</p>
+<div>
+  <ng-container *ngIf="user">
+    <p>Hello, {{ user.displayName }}</p>
+    <button (click)="logout.emit()">Logout</button>
+  </ng-container>
+</div>

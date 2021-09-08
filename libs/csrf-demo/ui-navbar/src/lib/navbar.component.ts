@@ -1,4 +1,12 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  ChangeDetectionStrategy,
+  Input,
+  Output,
+  EventEmitter,
+} from '@angular/core';
+
+import { User } from '@angular-web-security/csrf-api/data-access-users';
 
 @Component({
   selector: 'csrf-demo-navbar',
@@ -6,4 +14,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   styleUrls: ['./navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  @Input() user: User | null = null;
+  @Output() logout: EventEmitter<void> = new EventEmitter<void>();
+}
