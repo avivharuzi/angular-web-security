@@ -25,7 +25,11 @@
     "update": "nx migrate latest",
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
-    "help": "nx help"
+    "help": "nx help",
+    "serve:xss-demo": "nx serve xss-demo",
+    "serve:csp-demo": "nx serve csp-demo",
+    "serve:csrf-api": "nx serve csrf-api",
+    "serve:csrf-demo": "nx serve csrf-demo"
   },
   "private": true,
   "dependencies": {
