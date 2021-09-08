@@ -9,7 +9,7 @@ export const csrfMiddleware = (
   next: NextFunction
 ): void => {
   const csrfCookie = req.cookies[AuthCookie.XSRFToken];
-  const csrfHeader = req.headers['X-XSRF-TOKEN'];
+  const csrfHeader = req.headers['x-xsrf-token'];
   if (csrfCookie && csrfHeader && csrfCookie === csrfHeader) {
     return next();
   }
