@@ -49,9 +49,21 @@
     "csrf-demo": {
       "tags": ["type:app"]
     },
+    "csrf-demo-auth-data-access": {
+      "tags": ["scope:csrf-demo", "type:data-access"]
+    },
+    "csrf-demo-auth-feature-login": {
+      "tags": ["scope:csrf-demo", "type:feature"]
+    },
     "csrf-demo-e2e": {
       "tags": [],
       "implicitDependencies": ["csrf-demo"]
+    },
+    "csrf-demo-feature-home": {
+      "tags": ["scope:csrf-demo", "type:feature"]
+    },
+    "csrf-demo-ui-navbar": {
+      "tags": ["scope:csrf-demo", "type:ui"]
     },
     "xss-demo": {
       "tags": ["type:app"]

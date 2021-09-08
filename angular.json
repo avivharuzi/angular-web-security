@@ -333,6 +333,56 @@
         }
       }
     },
+    "csrf-demo-auth-data-access": {
+      "projectType": "library",
+      "root": "libs/csrf-demo/auth/data-access",
+      "sourceRoot": "libs/csrf-demo/auth/data-access/src",
+      "prefix": "csrf-demo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/csrf-demo/auth/data-access"],
+          "options": {
+            "jestConfig": "libs/csrf-demo/auth/data-access/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/csrf-demo/auth/data-access/src/**/*.ts",
+              "libs/csrf-demo/auth/data-access/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "csrf-demo-auth-feature-login": {
+      "projectType": "library",
+      "root": "libs/csrf-demo/auth/feature-login",
+      "sourceRoot": "libs/csrf-demo/auth/feature-login/src",
+      "prefix": "csrf-demo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/csrf-demo/auth/feature-login"],
+          "options": {
+            "jestConfig": "libs/csrf-demo/auth/feature-login/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/csrf-demo/auth/feature-login/src/**/*.ts",
+              "libs/csrf-demo/auth/feature-login/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "csrf-demo-e2e": {
       "root": "apps/csrf-demo-e2e",
       "sourceRoot": "apps/csrf-demo-e2e/src",
@@ -355,6 +405,56 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/csrf-demo-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "csrf-demo-feature-home": {
+      "projectType": "library",
+      "root": "libs/csrf-demo/feature-home",
+      "sourceRoot": "libs/csrf-demo/feature-home/src",
+      "prefix": "csrf-demo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/csrf-demo/feature-home"],
+          "options": {
+            "jestConfig": "libs/csrf-demo/feature-home/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/csrf-demo/feature-home/src/**/*.ts",
+              "libs/csrf-demo/feature-home/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
+    "csrf-demo-ui-navbar": {
+      "projectType": "library",
+      "root": "libs/csrf-demo/ui-navbar",
+      "sourceRoot": "libs/csrf-demo/ui-navbar/src",
+      "prefix": "csrf-demo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/csrf-demo/ui-navbar"],
+          "options": {
+            "jestConfig": "libs/csrf-demo/ui-navbar/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/csrf-demo/ui-navbar/src/**/*.ts",
+              "libs/csrf-demo/ui-navbar/src/**/*.html"
+            ]
           }
         }
       }

@@ -24,6 +24,18 @@
       "@angular-web-security/csrf-api/util-helpers": [
         "libs/csrf-api/util-helpers/src/index.ts"
       ],
+      "@angular-web-security/csrf-demo/auth/data-access": [
+        "libs/csrf-demo/auth/data-access/src/index.ts"
+      ],
+      "@angular-web-security/csrf-demo/auth/feature-login": [
+        "libs/csrf-demo/auth/feature-login/src/index.ts"
+      ],
+      "@angular-web-security/csrf-demo/feature-home": [
+        "libs/csrf-demo/feature-home/src/index.ts"
+      ],
+      "@angular-web-security/csrf-demo/ui-navbar": [
+        "libs/csrf-demo/ui-navbar/src/index.ts"
+      ],
       "@angular-web-security/xss-demo/feature-bypass-security": [
         "libs/xss-demo/feature-bypass-security/src/index.ts"
       ],
