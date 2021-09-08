@@ -40,7 +40,7 @@ export class AuthController {
       });
       const accessToken = await AuthService.createAccessToken(user);
       const xsrfToken = await generateToken();
-      const cookieOptions = { httpOnly: true };
+      const cookieOptions = { httpOnly: true, sameSite: false };
       res.cookie(AuthCookie.AccessToken, accessToken, cookieOptions);
       res.cookie(AuthCookie.XSRFToken, xsrfToken, cookieOptions);
       res.send(user);
