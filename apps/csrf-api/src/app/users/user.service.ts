@@ -3,6 +3,7 @@ import {
   UserLogin,
 } from '@angular-web-security/csrf-api/data-access-users';
 
+import { BadRequestError } from '../errors/bad-request-error';
 import { fakeUsers } from './fake-users';
 import { NotFoundError } from '../errors/not-found-error';
 
@@ -22,7 +23,9 @@ export class UserService {
         user.password === userLogin.password
     );
     if (!user) {
-      throw new NotFoundError();
+      throw new BadRequestError(
+        'The username or password you have entered is invalid'
+      );
     }
     return user;
   }

@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AuthFacade } from './auth-facade.service';
+import { AuthFacade } from './auth.facade';
 
-describe('AuthFacadeService', () => {
+describe('AuthFacade', () => {
   let service: AuthFacade;
 
   beforeEach(() => {

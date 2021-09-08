@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
-import { EntityState, EntityStore, StoreConfig } from '@datorama/akita';
-import { Auth } from './auth.model';
+import { Store, StoreConfig } from '@datorama/akita';
 
-export interface AuthState extends EntityState<Auth> {}
+import { User } from '@angular-web-security/csrf-api/data-access-users';
+
+export interface AuthState {
+  user: User | null;
+}
 
 @Injectable({ providedIn: 'root' })
 @StoreConfig({ name: 'auth' })
-export class AuthStore extends EntityStore<AuthState> {
-
+export class AuthStore extends Store<AuthState> {
   constructor() {
-    super();
+    super({
+      user: null,
+    });
   }
-
 }
