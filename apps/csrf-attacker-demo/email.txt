@@ -1,0 +1,5 @@
+Congratulation! you have won free trip to Dubai!
+
+Click this link to collect the prize -> http://localhost:5200
+
+Enjoy!
