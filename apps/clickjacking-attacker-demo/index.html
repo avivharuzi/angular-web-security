@@ -9,20 +9,20 @@
       position: relative;
     }
 
-    #decoyWebsite,
-    #targetWebsite {
+    #attackerWebsite,
+    #vulnerableWebsite {
       width: 1280px;
       height: 720px;
     }
 
-    #decoyWebsite {
+    #attackerWebsite {
       position: absolute;
       z-index: 1;
       top: 135px;
       left: 85px;
     }
 
-    #decoyWebsite button {
+    #attackerWebsite button {
       background: #000;
       color: #fff;
       border-radius: 5px;
@@ -30,7 +30,7 @@
       border: none;
     }
 
-    #targetWebsite {
+    #vulnerableWebsite {
       position: relative;
       opacity: 0.00001;
       z-index: 2;
@@ -38,14 +38,14 @@
   </style>
   <body>
     <div id="websites">
-      <div id="decoyWebsite">
+      <div id="attackerWebsite">
         <h1>
           If you want to unsubscribe from our mail list, click on unsubscribe
           button.
         </h1>
         <button>Unsubscribe</button>
       </div>
-      <iframe id="targetWebsite" src="http://localhost:4200"></iframe>
+      <iframe id="vulnerableWebsite" src="http://localhost:4200"></iframe>
     </div>
   </body>
 </html>
