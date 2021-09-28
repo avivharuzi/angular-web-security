@@ -1,6 +1,7 @@
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
 
 import { AuthFacade } from '@angular-web-security/csrf-demo/auth/data-access';
@@ -16,6 +17,7 @@ import { environment } from '../environments/environment';
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AppRoutingModule,
     BrowserModule,
+    BrowserAnimationsModule,
     CsrfDemoUiNavbarModule,
     HttpClientModule,
     HttpClientXsrfModule,
