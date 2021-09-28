@@ -32,7 +32,8 @@
     "serve:csrf-demo": "nx serve csrf-demo",
     "serve:csrf-attacker-demo": "http-server -c-1 apps/csrf-attacker-demo --port 5200",
     "serve:clickjacking-demo": "nx serve clickjacking-demo",
-    "serve:clickjacking-attacker-demo": "http-server -c-1 apps/clickjacking-attacker-demo --port 5200"
+    "serve:clickjacking-attacker-demo": "http-server -c-1 apps/clickjacking-attacker-demo --port 5200",
+    "serve:clickjacking-server": "nx build clickjacking-demo && ts-node apps/clickjacking-server/index"
   },
   "private": true,
   "dependencies": {
