@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'csrf-demo-ui-navbar',
+  displayName: 'shared-ui-navbar',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/csrf-demo/ui-navbar',
+  coverageDirectory: '../../../coverage/libs/shared/ui-navbar',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },

@@ -1,20 +1,21 @@
 import {
-  Component,
   ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
   Input,
   Output,
-  EventEmitter,
 } from '@angular/core';
 
-import { User } from '@angular-web-security/csrf-api/data-access-users';
+import { NavbarLink } from './navbar-link';
 
 @Component({
-  selector: 'csrf-demo-navbar',
+  selector: 'xss-demo-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-  @Input() user: User | null = null;
-  @Output() logout: EventEmitter<void> = new EventEmitter<void>();
+  @Input() title: string = '';
+  @Input() navbarLinks: NavbarLink[] = [];
+  @Output() navbarAction: EventEmitter<string> = new EventEmitter<string>();
 }

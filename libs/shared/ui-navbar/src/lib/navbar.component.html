@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <a class="navbar-title me-2" routerLink="/">{{ title }}</a>
+        <div>
+          <ng-container *ngFor="let navbarLink of navbarLinks">
+            <a *ngIf="navbarLink.link" mat-flat-button class="ms-2"
+               color="primary"
+               [routerLink]="navbarLink.link">{{ navbarLink.title }}</a>
+            <button
+              *ngIf="!navbarLink.link && navbarLink.actionName"
+              mat-flat-button
+              class="ms-2"
+              color="primary"
+              (click)="navbarAction.emit(navbarLink.actionName)">{{
+              navbarLink.title }}</button>
+            <p
+              *ngIf="!navbarLink.link && !navbarLink.actionName" class="ms-2">{{
+              navbarLink.title
+              }}</p>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
