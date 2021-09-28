@@ -27,6 +27,16 @@
     ]
   },
   "projects": {
+    "clickjacking-demo": {
+      "tags": ["type:app"]
+    },
+    "clickjacking-demo-e2e": {
+      "tags": [],
+      "implicitDependencies": ["clickjacking-demo"]
+    },
+    "clickjacking-demo-feature-home": {
+      "tags": ["scope:clickjacking-demo", "type:feature"]
+    },
     "csp-demo": {
       "tags": ["type:app"]
     },

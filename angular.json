@@ -1,6 +1,150 @@
 {
   "version": 1,
   "projects": {
+    "clickjacking-demo": {
+      "projectType": "application",
+      "root": "apps/clickjacking-demo",
+      "sourceRoot": "apps/clickjacking-demo/src",
+      "prefix": "clickjacking-demo",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/apps/clickjacking-demo",
+            "index": "apps/clickjacking-demo/src/index.html",
+            "main": "apps/clickjacking-demo/src/main.ts",
+            "polyfills": "apps/clickjacking-demo/src/polyfills.ts",
+            "tsConfig": "apps/clickjacking-demo/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "apps/clickjacking-demo/src/favicon.ico",
+              "apps/clickjacking-demo/src/assets"
+            ],
+            "styles": ["apps/clickjacking-demo/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "apps/clickjacking-demo/src/environments/environment.ts",
+                  "with": "apps/clickjacking-demo/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "clickjacking-demo:build:production"
+            },
+            "development": {
+              "browserTarget": "clickjacking-demo:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "clickjacking-demo:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/clickjacking-demo/src/**/*.ts",
+              "apps/clickjacking-demo/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/clickjacking-demo"],
+          "options": {
+            "jestConfig": "apps/clickjacking-demo/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "clickjacking-demo-e2e": {
+      "root": "apps/clickjacking-demo-e2e",
+      "sourceRoot": "apps/clickjacking-demo-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/clickjacking-demo-e2e/cypress.json",
+            "tsConfig": "apps/clickjacking-demo-e2e/tsconfig.e2e.json",
+            "devServerTarget": "clickjacking-demo:serve:development"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "clickjacking-demo:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/clickjacking-demo-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "clickjacking-demo-feature-home": {
+      "projectType": "library",
+      "root": "libs/clickjacking-demo/feature-home",
+      "sourceRoot": "libs/clickjacking-demo/feature-home/src",
+      "prefix": "clickjacking-demo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/clickjacking-demo/feature-home"],
+          "options": {
+            "jestConfig": "libs/clickjacking-demo/feature-home/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/clickjacking-demo/feature-home/src/**/*.ts",
+              "libs/clickjacking-demo/feature-home/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "csp-demo": {
       "projectType": "application",
       "root": "apps/csp-demo",

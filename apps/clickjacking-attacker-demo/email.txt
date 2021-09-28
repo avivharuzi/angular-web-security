@@ -1,0 +1,5 @@
+Hi! :)
+
+Read our new article about NASA: 'At least 5 fireballs' reported over US -> http://example.com/articles/123456
+
+If you don't want to get email from us any more click here to unsubscribe -> http://localhost:5200

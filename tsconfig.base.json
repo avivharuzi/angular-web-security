@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-web-security/clickjacking-demo/feature-home": [
+        "libs/clickjacking-demo/feature-home/src/index.ts"
+      ],
       "@angular-web-security/csp-demo/feature-home": [
         "libs/csp-demo/feature-home/src/index.ts"
       ],

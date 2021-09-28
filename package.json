@@ -30,7 +30,9 @@
     "serve:csp-demo": "nx serve csp-demo",
     "serve:csrf-api": "nx serve csrf-api",
     "serve:csrf-demo": "nx serve csrf-demo",
-    "serve:csrf-attacker-demo": "http-server -c-1 apps/csrf-attacker-demo --port 5200"
+    "serve:csrf-attacker-demo": "http-server -c-1 apps/csrf-attacker-demo --port 5200",
+    "serve:clickjacking-demo": "nx serve clickjacking-demo",
+    "serve:clickjacking-attacker-demo": "http-server -c-1 apps/clickjacking-attacker-demo --port 5200"
   },
   "private": true,
   "dependencies": {

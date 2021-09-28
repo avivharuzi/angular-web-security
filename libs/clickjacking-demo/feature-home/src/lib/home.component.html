@@ -1,0 +1,9 @@
+<div>
+  <ng-container *ngIf="isTransferred; else askForTransfer">
+    <h1>The money transferred successfully.</h1>
+  </ng-container>
+  <ng-template #askForTransfer>
+    <h1 class="mb-5">Are you sure want to transfer the money?</h1>
+    <button mat-raised-button color="accent" (click)="transfer()">Yes</button>
+  </ng-template>
+</div>
