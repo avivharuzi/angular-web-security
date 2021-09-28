@@ -13,6 +13,7 @@ const publicDirectory = path.join(
 
 app.use((req, res, next) => {
   res.setHeader('X-Frame-Options', 'sameorigin');
+  res.setHeader('Content-Security-Policy', "frame-ancestors 'self';");
   next();
 });
 
