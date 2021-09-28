@@ -8,7 +8,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  scriptInjection = `<div>Trying to fetch</div><img src="" onerror="fetch('https://jsonplaceholder.typicode.com/posts')" />`;
+  scriptInjection = `<h1>Trying to fetch</h1><img src="" alt="" onerror="fetch('https://jsonplaceholder.typicode.com/posts')" />`;
   safeScriptInjection: SafeHtml;
 
   constructor(private domSanitizer: DomSanitizer) {
