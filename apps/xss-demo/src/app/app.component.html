@@ -1,7 +1,4 @@
-<nav>
-  <ul>
-    <li><a routerLink="/default-sanitization">Default Sanitization</a></li>
-    <li><a routerLink="/bypass-security">Bypass Security</a></li>
-  </ul>
-</nav>
-<router-outlet></router-outlet>
+<shared-navbar title="XSS Demo" [navbarLinks]="links"></shared-navbar>
+<div class="container mt-5">
+  <router-outlet></router-outlet>
+</div>

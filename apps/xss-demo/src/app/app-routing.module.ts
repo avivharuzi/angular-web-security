@@ -20,6 +20,10 @@ const routes: Routes = [
           XssDemoFeatureBypassSecurityModule
       ),
   },
+  {
+    path: '**',
+    redirectTo: 'default-sanitization',
+  },
 ];
 
 @NgModule({

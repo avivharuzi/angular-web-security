@@ -1,19 +1,19 @@
-<div>
+<div class="mb-5">
   <h1>Bypass Binding using Interpolation</h1>
   {{ bypassInjectedHTML }}
 </div>
 
-<div>
+<div class="mb-5">
   <h1>Bypass Binding with innerHTML</h1>
   <div [innerHTML]="bypassInjectedHTML"></div>
 </div>
 
-<div>
+<div class="mb-5">
   <h1>Bypass Untrusted link</h1>
   <a [href]="bypassAttackerURL">Attack using URL</a>
 </div>
 
-<div>
+<div class="mb-5">
   <h1>Bypass Video Resource URL</h1>
   <iframe
     width="560"

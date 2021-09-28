@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpClientXsrfModule } from '@angular/common/http';
 
 import { AuthFacade } from '@angular-web-security/csrf-demo/auth/data-access';
-import { CsrfDemoUiNavbarModule } from '@angular-web-security/csrf-demo/ui-navbar';
+import { SharedUiNavbarModule } from '@angular-web-security/shared/ui-navbar';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,11 +16,11 @@ import { environment } from '../environments/environment';
   imports: [
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AppRoutingModule,
-    BrowserModule,
     BrowserAnimationsModule,
-    CsrfDemoUiNavbarModule,
+    BrowserModule,
     HttpClientModule,
     HttpClientXsrfModule,
+    SharedUiNavbarModule,
   ],
   providers: [
     {

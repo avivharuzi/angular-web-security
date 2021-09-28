@@ -434,17 +434,17 @@
         }
       }
     },
-    "csrf-demo-ui-navbar": {
+    "shared-ui-navbar": {
       "projectType": "library",
-      "root": "libs/csrf-demo/ui-navbar",
-      "sourceRoot": "libs/csrf-demo/ui-navbar/src",
-      "prefix": "csrf-demo",
+      "root": "libs/shared/ui-navbar",
+      "sourceRoot": "libs/shared/ui-navbar/src",
+      "prefix": "shared",
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/csrf-demo/ui-navbar"],
+          "outputs": ["coverage/libs/shared/ui-navbar"],
           "options": {
-            "jestConfig": "libs/csrf-demo/ui-navbar/jest.config.js",
+            "jestConfig": "libs/shared/ui-navbar/jest.config.js",
             "passWithNoTests": true
           }
         },
@@ -452,8 +452,8 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "libs/csrf-demo/ui-navbar/src/**/*.ts",
-              "libs/csrf-demo/ui-navbar/src/**/*.html"
+              "libs/shared/ui-navbar/src/**/*.ts",
+              "libs/shared/ui-navbar/src/**/*.html"
             ]
           }
         }

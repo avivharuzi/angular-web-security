@@ -1,19 +1,19 @@
-<div>
+<div class="mb-5">
   <h1>Binding using Interpolation</h1>
   {{ injectHTML }}
 </div>
 
-<div>
+<div class="mb-5">
   <h1>Binding with innerHTML</h1>
   <div [innerHTML]="injectHTML"></div>
 </div>
 
-<div>
+<div class="mb-5">
   <h1>Untrusted link</h1>
   <a [href]="attackerURL">Attack using URL</a>
 </div>
 
-<div>
+<div class="mb-5">
   <h1>Video Resource URL</h1>
   <iframe width="560" height="315" [src]="resourceURL" allowfullscreen></iframe>
 </div>

@@ -33,8 +33,8 @@
       "@angular-web-security/csrf-demo/feature-home": [
         "libs/csrf-demo/feature-home/src/index.ts"
       ],
-      "@angular-web-security/csrf-demo/ui-navbar": [
-        "libs/csrf-demo/ui-navbar/src/index.ts"
+      "@angular-web-security/shared/ui-navbar": [
+        "libs/shared/ui-navbar/src/index.ts"
       ],
       "@angular-web-security/xss-demo/feature-bypass-security": [
         "libs/xss-demo/feature-bypass-security/src/index.ts"

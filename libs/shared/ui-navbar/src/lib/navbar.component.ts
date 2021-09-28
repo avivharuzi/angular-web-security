@@ -9,7 +9,7 @@ import {
 import { NavbarLink } from './navbar-link';
 
 @Component({
-  selector: 'xss-demo-navbar',
+  selector: 'shared-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -62,8 +62,8 @@
     "csrf-demo-feature-home": {
       "tags": ["scope:csrf-demo", "type:feature"]
     },
-    "csrf-demo-ui-navbar": {
-      "tags": ["scope:csrf-demo", "type:ui"]
+    "shared-ui-navbar": {
+      "tags": ["scope:shared", "type:ui"]
     },
     "xss-demo": {
       "tags": ["type:app"]
